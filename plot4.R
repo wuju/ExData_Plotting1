@@ -29,7 +29,7 @@ dt <- dt[, datetime:=paste(Date,Time)]
 png("./figure/plot4.png")
 
 ## set margin and columns for multiple plots
-par(mfcol = c(2, 2), mar = c(4, 4, 4, 2))
+par(mfcol = c(2, 2), mar = c(4, 4, 4, 2), bg = rgb(0, 0, 0, 0))
 
 ## plot
 ## top left plot

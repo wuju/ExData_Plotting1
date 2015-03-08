@@ -22,11 +22,11 @@ dt <- dtall[dtall$Date==as.Date("2007-02-01", "%Y-%m-%d") |
 ## convert Global_active_power to numeric for plotting
 dt <- dt[, Global_active_power:=as.numeric(Global_active_power)]
 
-## set margin to allow all of y axis to be displayed
-par(mar = c(5, 4, 3, 2))
-
 ## open PNG file
 png("./figure/plot1.png")
+
+## set margin to allow all of y axis to be displayed
+par(mar = c(5, 4, 3, 2), bg = rgb(0, 0, 0, 0))
 
 ## plot histogram
 with(dt, hist(Global_active_power, 

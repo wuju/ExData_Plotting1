@@ -22,11 +22,11 @@ dt <- dtall[dtall$Date==as.Date("2007-02-01", "%Y-%m-%d") |
 ## convert Global_active_power to numeric for plotting
 dt <- dt[, Global_active_power:=as.numeric(Global_active_power)]
 
-## set margin to allow all of y axis to be displayed
-par(mar = c(2,4,1,1))
-
 ## open PNG file
 png("./figure/plot2.png")
+
+## set margin to allow all of y axis to be displayed
+par(mar = c(2, 4, 1, 1), bg = rgb(0, 0, 0, 0))
 
 ## plot
 with(dt, plot(strptime(paste(Date, Time), "%Y-%m-%d %H:%M:%S"), 
